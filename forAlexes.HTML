@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? From Dav~</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+        body {
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            margin: 50px;
+            position: relative;
+            background-color: #ffb6c1;
+            background-image: url('https://media1.tenor.com/m/CpS4vBQcsesAAAAC/cute-cat-love.gif'); /* Meme cat GIF background */
+            background-size: 150px 150px; /* Resizes for a pattern effect */
+            background-repeat: repeat; /* Repeats the GIF */
+            background-attachment: fixed; /* Keeps it in place while scrolling */
+        }
+
+        .container {
+            margin-top: 100px;
+            background: rgba(255, 255, 255, 0.8);
+            display: inline-block;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 40px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .gif {
+            width: 250px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        button:first-of-type {
+            background-color: #ff4081;
+            color: white;
+        }
+
+        #noBtn {
+            position: absolute;
+            background-color: #b0bec5;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Will you be my Valentine, Alexes Senpai? 💖</h1>
+        <img id="gif" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWdmeWgxbjR6eHlpaTJiaTdzMXRxeWVuY3o1NWlybnFnc21waW1mdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7nlbYoryJoV6o/giphy.gif" alt="Love Cat GIF" class="gif">
+        <br>
+        <button onclick="changeGif()">Yes</button>
+        <button id="noBtn" onmouseover="moveButton()">No</button>
+    </div>
+
+    <script>
+        function changeGif() {
+            document.getElementById("gif").src = "https://i.pinimg.com/originals/d8/3e/7b/d83e7b360ccc1111ccae673f4bf25bff.gif"; 
+            alert('Yay! It was never an option to say no my love!! 5ever With You Always Alexes Mwah 💕');
+        }
+
+        function moveButton() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            document.getElementById("noBtn").style.left = x + "px";
+            document.getElementById("noBtn").style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
